@@ -7,23 +7,16 @@
       "config": {
         "distDir": "dist"
       }
-    },
-    {
-      "src": "backend/server.js",
-      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/server.js"
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/weatherly-app/$1"
+      "dest": "/frontend/weatherly-app/dist/$1"
     }
-  ],
-  "env": {
-    "WEATHER_API_KEY": "@weather_api_key"
-  }
+  ]
 }
