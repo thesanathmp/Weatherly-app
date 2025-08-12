@@ -91,6 +91,27 @@ A modern weather application built with React frontend and Node.js backend.
 
 The app includes a demo mode that generates mock weather data when no API key is configured. This allows you to test the application without setting up external API credentials.
 
+## Deployment
+
+### Vercel (Recommended)
+This project is optimized for Vercel deployment. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+Quick deploy:
+1. Push to GitHub
+2. Import to Vercel
+3. Add `WEATHER_API_KEY` environment variable
+4. Deploy!
+
+### Local Development
+For local development:
+```bash
+# Backend
+cd backend && npm run dev
+
+# Frontend (new terminal)
+cd frontend/weatherly-app && npm run dev
+```
+
 ## Contributing
 
 1. Fork the repository

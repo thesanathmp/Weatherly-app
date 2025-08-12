@@ -1,4 +1,7 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+// Use relative URLs for Vercel deployment, fallback to localhost for development
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? '/api' 
+  : 'http://localhost:5000/api';
 
 export const weatherService = {
   // Get weather data for a city
